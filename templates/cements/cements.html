@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+
+{% block title %} | Our cements Inventory {% endblock %}
+{% block content %}
+
+{% load humanize %}
+<!-- Sub banner start -->
+
+
+<div class="w3-row w3-container ">
+<br>
+    <div class="w3-col s8  w3-center  max-w-7xl">
+      <br>
+      <p>
+        <div class="w3-hide-small">
+            <div class="carousel px-20"
+            data-flickity='{ "freeScroll": true, }'>
+                <!-- Automatic Slideshow Images -->
+        <div class="mySlides w3-display-container w3-center">
+           <img src="https://i.postimg.cc/YCS1vhK4/chota-hath.png" style="width:80%">
+        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+       </div>
+       </div>
+        <div class="mySlides w3-display-container w3-center">
+        <img src="https://i.postimg.cc/Sx7xbGtC/Lowest-Ratesmahindra-pick-up.png" style="width:80%">
+        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+       </div>
+       </div>
+        <div class="mySlides w3-display-container w3-center">
+          <img src="https://i.postimg.cc/Hxfrkk0y/Lowest-Rates-JSDVJSDFDSFDS.png" style="width:80%">
+ 
+        </div>
+        </div>
+        </div>
+
+     
+      </p>
+    </div>
+    <div class="w3-hide-large w3-hide-medium">
+      
+      <img src="https://i.postimg.cc/BQDZqrCP/eeeessssaaaa.png" style="width:100%">
+    </div>
+
+<!--big screen-->
+<div class="">
+    <div class="w3-col s3 w3-container py-2 w3-hide-small">
+      <br><br><br>
+      
+      <div class="py-2 w3-hide-small" style="width: 6rem;">
+        <img class="card-img-top " src="https://i.postimg.cc/9FFFG9xB/choose-your-professionhhhhhhh-1.png" alt="Card image cap">
+      </div>
+<form action="{% url 'cementsearch' %}" method="" class="w3-hide-small">
+    <div class="mb-2">
+        <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="model">
+            <option selected="true" disabled="disabled">Model</option>
+            {% for model in model_search %}
+              <option value="{{model}}">{{model}}</option>
+            {% endfor %}
+        </select> </div> 
+    <div class="mb-2">
+        <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+        <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="city">
+            <option selected="true" disabled="disabled">Location</option>
+            {% for city in city_search %}
+              <option value="{{city}}">{{city}}</option>
+            {% endfor %}
+        </select> </div> 
+
+
+                
+    
+    <div class="flex items-start mb-6">
+      <div class="form-group">
+        <button class="w3-black w3-button w3-round w3-block">
+            <i class="fa fa-search"></i> Search
+        </button>
+    </div>
+    </form>
+
+    </div>   
+</div>
+<!--smallscreen-->
+
+<div class="w3-col  w3-hide-large w3-hide-medium">
+  <br>
+  <div class="py-4" style="width: 8rem;">
+    <img class="card-img-top " src="https://i.postimg.cc/9FFFG9xB/choose-your-professionhhhhhhh-1.png" alt="Card image cap">
+
+  </div>
+
+<!--big screen-->
+<form action="{% url 'cementsearch' %}" method="" class="">
+ 
+  <div class="mb-2 ">
+      <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="model">
+          <option selected="true" disabled="disabled">Model</option>
+          {% for model in model_search %}
+            <option value="{{model}}">{{model}}</option>
+          {% endfor %}
+      </select> </div> 
+  <div class="mb-2">
+      <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+      <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="city">
+          <option selected="true" disabled="disabled">Location</option>
+          {% for city in city_search %}
+            <option value="{{city}}">{{city}}</option>
+          {% endfor %}
+      </select> </div> 
+
+
+              
+  
+  <div class="flex items-start mb-6">
+    <div class="form-group">
+      <button class="w3-black w3-button w3-round w3-block">
+          <i class="fa fa-search"></i> Search
+      </button>
+  </div>
+  </form>
+</div>   
+    <!--bigscreen-->
+    
+      <div class="w3-row w3-center">
+        <div class="w3-col s4 w3-center"><p>
+          <div class="py-1" style="width: 6.5rem;">
+            <a href="/cements/3">
+            <img class="card-img-top " src="https://i.postimg.cc/d0w1RLMZ/chota-hathichota-hathi.png" alt="Card image cap">
+             </a>
+          </div>
+        </p></div>
+        <div class="w3-col s4  w3-center"><p>
+          <div class="py-1" style="width: 6.5rem;">
+            <a href="/cements/1">
+            <img class="card-img-top " src="https://i.postimg.cc/50WZQFDD/uuubgggfffff.png" alt="Card image cap">
+            </a>
+          </div>
+        </p></div>
+        <div class="w3-col s4  w3-center"><p>  <div class="py-1" style="width: 6.5rem;">
+          <a href="/cements/2">
+          <img class="card-img-top " src="https://i.postimg.cc/ZRjVYBm8/TATA-407.png" alt="Card image cap">
+          </a>
+        </div>
+      </p></div>
+      </div>
+
+      
+      <div class="py-2 swiffy-slider slider-item-ratio slider-item-ratio-16x9 slider-nav-animation slider-nav-animation-fadein slider-nav-autoplay slider-nav-autopause" id="swiffy-animation">
+        <ul class="slider-container" id="container1">
+            <li id="slide1" class=""><img src="https://i.postimg.cc/wvpw1LXX/MATERIAL-SHOPservices-at-the-right-price.png" alt="..." loading="lazy"></li>
+            <li id="slide2" class=""><img src="https://i.postimg.cc/qRwxgYMr/MATERIAL-SHOPGGGGJHGHGG.png" alt="..." loading="lazy"></li>
+            <li id="slide3" class=""><img src="https://i.postimg.cc/HssP0wf3/MATERIAL-SHOPWith-Secure-insurance-coverage.png" alt="..." loading="lazy"></li>
+        </ul>
+    
+        <button type="button" class="slider-nav" aria-label="Go to previous"></button>
+        <button type="button" class="slider-nav slider-nav-next" aria-label="Go to next"></button>
+    
+        <div class="slider-indicators">
+            <button aria-label="Go to slide" class=""></button>
+            <button aria-label="Go to slide" class=""></button>
+            <button aria-label="Go to slide" class=""></button>
+            <button aria-label="Go to slide" class="active"></button>
+            <button aria-label="Go to slide" class=""></button>
+            <button aria-label="Go to slide" class=""></button>
+        </div>
+    </div>
+
+
+  </div>
+  <br><br>
+
+
+    
+  <!-- Intro section end -->
+<div class="w3-hide-small w3-container w3-row w3-row-padding">
+  <div class="w3-row w3-container">
+    
+     <div class="w3-col s4 w3-center">
+       <p>    <div class="py-1" style="width: 25.5rem;">
+         <img class="card-img-top " src="https://i.postimg.cc/wvpw1LXX/MATERIAL-SHOPservices-at-the-right-price.png" alt="Card image cap">
+       </div></p>
+     </div>
+     <div class="w3-col s4  w3-center">
+       <p>   
+          <div class="py-1" style="width: 25.5rem;">
+         <img class="card-img-top " src="https://i.postimg.cc/qRwxgYMr/MATERIAL-SHOPGGGGJHGHGG.png" alt="Card image cap">
+       </div></p>
+     </div>
+     <div class="w3-col s4  w3-center">
+       <p>   
+          <div class="py-1" style="width: 25.5rem;">
+         <img class="card-img-top " src="https://i.postimg.cc/HssP0wf3/MATERIAL-SHOPWith-Secure-insurance-coverage.png" alt="Card image cap">
+       </div></p>
+     </div>
+   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <br><br>
+         
+
+<!-- Featured car end -->
+
+{% endblock %}
